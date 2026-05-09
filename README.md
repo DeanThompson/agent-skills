@@ -15,13 +15,41 @@ This repository contains portable `SKILL.md`-based workflows that can be install
 
 ## Install
 
-With the `skills` installer:
+List the available skills:
+
+```bash
+npx skills@latest add DeanThompson/agent-skills --list
+```
+
+Install interactively:
 
 ```bash
 npx skills@latest add DeanThompson/agent-skills
 ```
 
 Then choose the skills and target runtimes you want to install.
+
+Install a specific skill:
+
+```bash
+npx skills@latest add DeanThompson/agent-skills --skill git-workflow
+npx skills@latest add DeanThompson/agent-skills --skill cloudflare-dns-manager
+npx skills@latest add DeanThompson/agent-skills --skill gitlab-mr
+npx skills@latest add DeanThompson/agent-skills --skill agent-context-files
+```
+
+Install a specific skill to a specific runtime:
+
+```bash
+npx skills@latest add DeanThompson/agent-skills --skill git-workflow --agent codex -g -y
+npx skills@latest add DeanThompson/agent-skills --skill git-workflow --agent claude-code -g -y
+```
+
+Install all skills:
+
+```bash
+npx skills@latest add DeanThompson/agent-skills --skill '*'
+```
 
 Manual install:
 
