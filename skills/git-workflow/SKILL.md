@@ -3,7 +3,6 @@ name: git-workflow
 description: Use when the user wants Git workflow help around committing, rebasing, or cleaning up branches/worktrees. Covers smart conventional commits, grouping changes into multiple focused commits, rebasing a branch onto an updated base branch, cleaning up a finished branch, removing linked git worktrees, returning to a base branch like develop, and safely deleting local branches without destructive reset operations.
 license: MIT
 metadata:
-  author: Yangliang Li
   version: "0.1.0"
   requires:
     bins: ["git"]

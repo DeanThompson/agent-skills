@@ -3,7 +3,6 @@ name: gitlab-mr
 description: Use when the user wants to create a GitLab merge request, draft an MR title and description, compare the current branch against a target branch, push the branch, or run `glab mr create`. Covers previewing the generated MR copy and confirming before creation.
 license: MIT
 metadata:
-  author: Yangliang Li
   version: "0.1.0"
   requires:
     bins: ["git", "glab"]
