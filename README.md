@@ -1,8 +1,8 @@
-# Agent Skills
+# Agent Skills for Coding Agents
 
-Small, reusable skills for coding agents.
+Small, reusable Agent Skills for coding agents and AI developer tools.
 
-This repository contains portable `SKILL.md`-based workflows that can be installed into runtimes such as Claude Code, Codex, Cursor, OpenCode, and other agents that support the Agent Skills convention.
+This repository contains portable `SKILL.md`-based workflows for Claude Code, Codex, Cursor, OpenCode, and other runtimes that support the Agent Skills convention. It focuses on practical developer workflows: Git worktrees, GitLab merge requests, Cloudflare DNS management, and persistent agent context files.
 
 ## Skills
 
