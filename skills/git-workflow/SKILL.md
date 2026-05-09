@@ -1,8 +1,9 @@
 ---
 name: git-workflow
-description: Use when the user wants Git workflow help around committing, rebasing, or cleaning up branches/worktrees. Covers smart conventional commits, grouping changes into multiple focused commits, rebasing a branch onto an updated base branch, cleaning up a finished branch, removing linked git worktrees, returning to a base branch like develop, and safely deleting local branches without destructive reset operations.
+description: Use when the user wants Git workflow help around committing, rebasing, creating linked worktrees, bootstrapping a worktree environment, or cleaning up branches/worktrees. Covers smart conventional commits, grouping changes into focused commits, safe rebases, linked worktree setup under .worktrees, optional environment reuse through symlinks, branch cleanup, and safe local branch deletion without destructive reset operations.
 license: MIT
 metadata:
+  author: Yangliang Li
   version: "0.1.0"
   requires:
     bins: ["git"]
@@ -14,7 +15,8 @@ Use this skill for three common Git tasks:
 
 1. Smart commits for current changes
 2. Rebase of the current branch onto a base branch
-3. Cleanup of a finished branch or linked worktree
+3. Linked worktree creation and environment bootstrap
+4. Cleanup of a finished branch or linked worktree
 
 ## Commit Workflow
 
@@ -42,6 +44,21 @@ Key expectations:
 - Never delete the target branch.
 - Only delete local branches; do not delete remotes.
 - Never use destructive reset or checkout operations.
+
+## Worktree Workflow
+
+Use this when the user asks to create a linked worktree, start feature work away from `main`/`develop`, or bootstrap a worktree environment.
+
+Read [references/git-worktree.md](references/git-worktree.md) and follow it.
+
+Key expectations:
+
+- Confirm the repository root, current branch, linked-worktree status, and uncommitted changes before creating or entering a worktree.
+- Prefer linked worktrees under the repository root at `.worktrees/<branch-slug>`.
+- Prefer creating a feature branch from the requested base branch rather than editing directly on `main` or `develop`.
+- Offer environment reuse by symlinking common local-only assets from the main worktree.
+- Respect a no-reuse option when the user wants isolation or the project cannot safely share dependencies.
+- Never overwrite existing non-symlink files while bootstrapping.
 
 ## Rebase Workflow
 

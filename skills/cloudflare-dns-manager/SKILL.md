@@ -3,6 +3,7 @@ name: cloudflare-dns-manager
 description: Manage Cloudflare DNS zones, DNS records, and Cloudflare single redirect rules through the official API. Use when an agent needs to inspect Cloudflare zones, list DNS records, create or update SPF/DKIM/DMARC/MX/CNAME/TXT records, delete records, configure www-to-apex redirects, export zones, or prepare DNS changes for domains hosted on Cloudflare, especially when the account contains multiple zones.
 license: MIT
 metadata:
+  author: Yangliang Li
   version: "0.1.0"
   requires:
     bins: ["python3"]

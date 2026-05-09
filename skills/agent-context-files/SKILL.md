@@ -3,6 +3,7 @@ name: agent-context-files
 description: Create, review, and optimize persistent agent context files such as AGENTS.md, CLAUDE.md, .cursorrules, GEMINI.md, or repository-specific AI assistant instructions. Use when the user asks to create or improve agent instructions, project memory, coding-agent onboarding docs, or context files that should be loaded across sessions.
 license: MIT
 metadata:
+  author: Yangliang Li
   version: "0.1.0"
 ---
 

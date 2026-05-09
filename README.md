@@ -18,10 +18,10 @@ This repository contains portable `SKILL.md`-based workflows that can be install
 With the `skills` installer:
 
 ```bash
-npx skills@latest add <github-owner>/agent-skills
+npx skills@latest add DeanThompson/agent-skills
 ```
 
-Replace `<github-owner>` with the GitHub owner that hosts your fork or copy of this repository, then choose the skills and target runtimes you want to install.
+Then choose the skills and target runtimes you want to install.
 
 Manual install:
 
