@@ -1,0 +1,16 @@
+title = "agent-skills gitleaks config"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "cloudflare-api-token"
+description = "Detect likely Cloudflare API tokens"
+regex = '''\b[A-Za-z0-9_-]{35,}\b'''
+keywords = ["CLOUDFLARE_API_TOKEN", "CF_API_TOKEN", "cloudflare"]
+
+[[rules]]
+id = "gitlab-token"
+description = "Detect likely GitLab personal access tokens"
+regex = '''\b(glpat|gldt|glrt|glcbt)-[A-Za-z0-9_-]{20,}\b'''
+keywords = ["glpat", "gldt", "glrt", "glcbt"]
